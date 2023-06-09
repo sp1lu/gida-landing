@@ -5,7 +5,7 @@
 }
 
 :root {
-    --grey-color: #f7f7f7;
+    --grey-color: #f3f3f3;
     --black-color: black;
     --white-color: white;
     --green-color: #335C51;
@@ -63,6 +63,32 @@ h2 {
     background-color: var(--grey-color);
 }
 
+.cta-section {
+    background-color: var(--green-color);
+    padding: 80px 0px;
+}
+
+.cta-section h2,
+.cta-section p {
+    color: var(--white-color);
+}
+
+.cta-section button {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 12px 32px;
+    background-color: #D8C17B;
+    color: rgba(0, 0, 0, .87);
+    border: none;
+    border-radius: 4px;
+    width: 200px;
+    transition: 100ms ease-in-out;
+}
+
+.cta-section button:hover {
+    background-color: #bea96a;
+}
+
 strong {
     color: var(--dark-green-color);
 }
@@ -84,6 +110,15 @@ strong {
     p {
         font-size: 16px;
         text-align: justify;
+    }
+
+    .cta-section p {
+
+        text-align: center;
+    }
+
+    .cta-section button {
+        width: 90%;
     }
 
 }
