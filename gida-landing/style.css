@@ -5,7 +5,7 @@ Root
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth !important;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -86,15 +86,12 @@ Header
 }
 
 .logo-gida {
-    max-height: 64px;
+    max-height: 72px;
 }
 
 .menu {
     list-style: none;
-}
-
-.menu li {
-    margin-left: 24px;
+    padding: 0px;
 }
 
 .menu li a {
@@ -105,6 +102,14 @@ Header
     transition: 100ms ease-in-out;
 }
 
+.menu li {
+    margin-left: 24px;
+}
+
+.menu li:first-child {
+    margin-left: 0px;
+}
+
 .menu li a:hover {
     color: var(--dark-green-color);
 }
@@ -112,7 +117,6 @@ Header
 /*
 Hero section
 */
-
 #nome-bando {
     font-size: 12px;
 }
@@ -163,17 +167,27 @@ CTA section
 
 .cta-section a {
     font-size: 18px;
-    color: var(--yellow-color);
+    color: var(--green-color);
     transition: 100ms ease-in-out;
     text-decoration: none;
 }
 
-.cta-section:hover {
+#contatti a {
+    color: var(--yellow-color);
+    transition: 100ms ease-in-out;
+}
+
+#contatti a:hover {
     color: var(--yellow-dark-color);
 }
 
 .cta-section #website-link {
     color: var(--white-color);
+    transition: 100ms ease-in-out;
+}
+
+.cta-section #website-link:hover {
+    color: var(--grey-color);
 }
 
 /*
