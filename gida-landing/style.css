@@ -1,20 +1,30 @@
+/*
+Root
+*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth !important;
 }
 
 :root {
     --grey-color: #f3f3f3;
     --black-color: black;
     --white-color: white;
+
     --green-color: #335C51;
     --dark-green-color: #223530;
+
+    --yellow-color: #D8C17B;
+    --yellow-dark-color: #bea96a;
 
     --title-font: 'Noto Sans', sans-serif;
     --title-font-size: 24px;
 
     --h2-font-size: 20px;
+
+    --h3-font-size: 18px;
 
     --text-font: 'Roboto', sans-serif;
 }
@@ -26,6 +36,9 @@ body {
     background-color: var(--white-color);
 }
 
+/*
+General
+*/
 h1 {
     font-family: var(--title-font);
     font-size: var(--title-font-size);
@@ -39,6 +52,27 @@ h2 {
     color: var(--green-color);
 }
 
+h3 {
+    font-size: var(--h3-font-size);
+    color: var(--green-color);
+}
+
+strong {
+    color: var(--dark-green-color);
+}
+
+.jumbotron {
+    background-color: var(--grey-color);
+}
+
+.logo {
+    max-height: 40px;
+    margin-right: 24px;
+}
+
+/*
+Header
+*/
 .landing-header {
     max-width: 100%;
     /* margin: auto; */
@@ -52,32 +86,66 @@ h2 {
 }
 
 .logo-gida {
-    max-height: 70px;
+    max-height: 64px;
 }
 
-.logo {
-    max-height: 40px;
+.menu {
+    list-style: none;
 }
 
-.jumbotron {
-    background-color: var(--grey-color);
+.menu li {
+    margin-left: 24px;
 }
 
+.menu li a {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--green-color);
+    transition: 100ms ease-in-out;
+}
+
+.menu li a:hover {
+    color: var(--dark-green-color);
+}
+
+/*
+Hero section
+*/
+
+#nome-bando {
+    font-size: 12px;
+}
+
+/*
+Tematiche section
+*/
+#tematiche {
+    scroll-behavior: smooth;
+}
+
+/*
+CTA section
+*/
 .cta-section {
     background-color: var(--green-color);
     padding: 80px 0px;
 }
 
-.cta-section h2,
+.cta-section h2 {
+    color: var(--white-color);
+}
+
 .cta-section p {
     color: var(--white-color);
+    font-size: 20px;
 }
 
 .cta-section button {
     text-transform: uppercase;
     font-weight: 700;
     padding: 12px 32px;
-    background-color: #D8C17B;
+    background-color: var(--yellow-color);
     color: rgba(0, 0, 0, .87);
     border: none;
     border-radius: 4px;
@@ -86,17 +154,59 @@ h2 {
 }
 
 .cta-section button:hover {
-    background-color: #bea96a;
+    background-color: var(--yellow-dark-color);
 }
 
-strong {
-    color: var(--dark-green-color);
-}
-
-.main-title {
+.cta-section .main-title {
     font-size: 24px;
 }
 
+.cta-section a {
+    font-size: 18px;
+    color: var(--yellow-color);
+    transition: 100ms ease-in-out;
+    text-decoration: none;
+}
+
+.cta-section:hover {
+    color: var(--yellow-dark-color);
+}
+
+.cta-section #website-link {
+    color: var(--white-color);
+}
+
+/*
+News section
+*/
+
+.news-card {
+    margin-bottom: 40px;
+
+}
+
+.news-card-img {
+    padding: 0px;
+}
+
+.news-card img {
+    border-radius: 16px 16px 0px 0px;
+}
+
+.news-card-info {
+    padding: 24px;
+    background-color: var(--grey-color);
+    border-radius: 0px 0px 16px 16px;
+}
+
+.news-card-info .news-date {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/*
+Media queries
+*/
 @media screen and (max-width: 576px) {
 
     h1 {
@@ -110,6 +220,10 @@ strong {
     p {
         font-size: 16px;
         text-align: justify;
+    }
+
+    .logo {
+        margin-right: 8px;
     }
 
     .cta-section p {
